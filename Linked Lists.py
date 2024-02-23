@@ -120,19 +120,60 @@ class LinkedList:
             temp.next = before
             before = temp
             temp = after
+            
+    def find_middle_node(self):
+        fast = self.head
+        slow = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
+    
+    def has_loop(self):
+        slow = self.head
+        fast = self.head
+        met = False
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if fast == slow:
+                met = True
+                break
+        if not met:
+            return None
+        else:
+            slow = self.head
+            while slow != fast:
+                slow = slow.next
+                fast = fast.next
+        return slow
+    
+    def remove_duplicates(self):
+        values = set()
+        previous = None
+        current = self.head
+        while current:
+            if current.value in values:
+                previous.next = current.next
+                self.length -= 1 
+            else:
+                values.add(current.value)
+                previous = current
+            current = current.next
   
-
+def find_kth_from_end(ll, k):
+    slow = fast = ll.head
+    for _ in range(k):
+        if fast is None:
+            return None
+        fast = fast.next
+    while fast:
+        fast = fast.next
+        slow = slow.next
+    return slow
 
 
 my_linked_list = LinkedList(1)
 my_linked_list.append(2)
 my_linked_list.append(3)
 my_linked_list.append(4)
-
-print('LL before reverse():')
-my_linked_list.print_list()
-
-my_linked_list.reverse()
-
-print('\nLL after reverse():')
-my_linked_list.print_list()
