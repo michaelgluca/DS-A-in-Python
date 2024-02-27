@@ -40,9 +40,9 @@ Feedback and contributions are highly appreciated.
 
 ## Contact
 
-Michael Luca
-[https://github.com/michaelgluca](GitHub)
-[https://www.linkedin.com/in/michael-g-luca-780801105/](LinkedIn)
-[https://twitter.com/M_GLuca](𝕏)
+Michael Luca 
+[GitHub](https://github.com/michaelgluca)
+[LinkedIn](https://www.linkedin.com/in/michael-g-luca-780801105/)
+[𝕏](https://twitter.com/M_GLuca)
 Project Link: `https://github.com/michaelgluca/dsa-python`\
 Thank you for visiting the dsa-python repository!
