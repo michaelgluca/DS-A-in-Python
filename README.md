@@ -18,7 +18,7 @@ Each section includes source code, a README file explaining the concept, and exa
 
 To get started, clone this repository to your local machine:
 
-`git clone https://github.com/michaelgluca/dsa-python.git`\
+`git clone https://github.com/michaelgluca/dsa-python.git`
 
 Navigate to the specific sections to explore implementations and explanations. You can run the Python scripts to see the algorithms in action.
 
