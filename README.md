@@ -27,9 +27,9 @@ Navigate to the specific sections to explore implementations and explanations. Y
 Contributions are welcome! If you would like to contribute, please follow these steps:
 
 Fork the repository.
-Create a new branch for your feature (`git checkout -b feature/AmazingFeature`).\
-Commit your changes (`git commit -m 'Add some AmazingFeature'`).\
-Push to the branch (`git push origin feature/AmazingFeature`).\
+Create a new branch for your feature `git checkout -b feature/AmazingFeature`\
+Commit your changes `git commit -m 'Add some AmazingFeature'`\
+Push to the branch `git push origin feature/AmazingFeature`\
 Open a Pull Request.\
 Before contributing, please check the CONTRIBUTING.md file for more detailed information.
 
