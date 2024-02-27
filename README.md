@@ -35,8 +35,8 @@ Before contributing, please check the CONTRIBUTING.md file for more detailed inf
 
 **Acknowledgments**
 
-This project is intended for educational purposes.
-Feel free to use the code for your own projects or learning.
+This project is intended for educational purposes.\
+Feel free to use the code for your own projects or learning.\
 Feedback and contributions are highly appreciated.
 
 **Contact**
