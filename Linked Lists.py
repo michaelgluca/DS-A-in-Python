@@ -160,6 +160,14 @@ class LinkedList:
                 values.add(current.value)
                 previous = current
             current = current.next
+    
+    def binary_to_decimal(self):
+        num = 0
+        current = self.head
+        while current:
+            num = num * 2 + current.value
+            current = current.next
+        return num 
   
 def find_kth_from_end(ll, k):
     slow = fast = ll.head
