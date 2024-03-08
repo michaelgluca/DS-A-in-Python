@@ -126,3 +126,10 @@ class DoublyLinkedList:
         if self.head is None or self.head == self.tail:
             return
         self.head.value, self.tail.value = self.tail.value, self.head.value
+        
+    def reverse(self):
+        temp = self.head
+        while temp is not None:
+            temp.prev, temp.next = temp.next, temp.prev
+            temp = temp.prev
+        self.head, self.tail = self.tail, self.head

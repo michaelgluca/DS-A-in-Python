@@ -181,8 +181,3 @@ def find_kth_from_end(ll, k):
         slow = slow.next
     return slow
 
-
-my_linked_list = LinkedList(1)
-my_linked_list.append(2)
-my_linked_list.append(3)
-my_linked_list.append(4)
