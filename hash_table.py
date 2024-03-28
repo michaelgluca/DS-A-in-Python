@@ -5,12 +5,19 @@ class HashTable:
     def __hash(self, key):
         my_hash = 0
         for letter in key:
-            my_hash = (my_hash + ord(letter)) % len(data_map)
+            my_hash = (my_hash + ord(letter)) % len(self.data_map)
         return my_hash
     
     def print_table(self):
         for i, val in enumerate(self.data_map):
             print(i, ": ", val)
             
+    def set_item(self, key, value):
+        index = self.__hash(key)
+        if self.data_map[index] == None:
+            self.data_map[index] = []
+        self.data_map[index].append([key, value])
+            
 my_table = HashTable()
+my_table.set_item("cars", 100)
 my_table.print_table()
