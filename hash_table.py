@@ -43,8 +43,12 @@ def item_in_common(list1, list2):
             return True
     return False
 
-list1 = [1,3,5]
-list2 = [2,4,5]
-
-
-print(item_in_common(list1, list2))
+def find_duplicates(nums):
+    nums_counts = {}
+    for num in nums:
+        nums_counts[num] = nums_counts.get(num, 0) + 1
+    duplicates = []
+    for num, count in nums_counts.items():
+        if count > 1:
+            duplicates.append(num)
+    return duplicates
