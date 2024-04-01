@@ -61,3 +61,13 @@ def first_non_repeating_char(string):
         if char_counts[char] == 1 :
             return char
     return None
+
+def group_anagrams(strings):
+    anagrams_groups = {}
+    for string in strings:
+        canonical = ''.join(sorted(string))
+        if canonical in anagrams_groups:
+            anagrams_groups[canonical].append(string)
+        else:
+            anagrams_groups[canonical] = [string]
+    return list(anagrams_groups.values())
