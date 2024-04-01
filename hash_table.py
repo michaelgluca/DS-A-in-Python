@@ -33,3 +33,18 @@ class HashTable:
                 for j in range(len(self.data_map[i])):
                     all_keys.append(self.data_map[i][j][0])
         return all_keys
+
+def item_in_common(list1, list2):
+    my_dictionary = {}
+    for i in list1:
+        my_dictionary[i] = True
+    for j in list2:
+        if j in list1:
+            return True
+    return False
+
+list1 = [1,3,5]
+list2 = [2,4,5]
+
+
+print(item_in_common(list1, list2))
