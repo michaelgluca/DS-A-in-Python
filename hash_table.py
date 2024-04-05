@@ -5,7 +5,7 @@ class HashTable:
     def __hash(self, key):
         my_hash = 0
         for letter in key:
-            my_hash = (my_hash + ord(letter)) % len(self.data_map)
+            my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
         return my_hash
     
     def print_table(self):
@@ -71,3 +71,12 @@ def group_anagrams(strings):
         else:
             anagrams_groups[canonical] = [string]
     return list(anagrams_groups.values())
+
+def two_sum(nums, target):
+    num_map = {}
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in num_map:
+            return [num_map[complement], i]
+        num_map[num] = i
+    return []
