@@ -9,7 +9,7 @@ Data structures and algorithms are fundamental to efficient problem-solving and 
 Basic Data Structures: Includes implementations and explanations of stacks, queues, linked lists, trees, graphs, and more.\
 Sorting Algorithms: Features classic sorting algorithms like Bubble Sort, Merge Sort, Quick Sort, and Heap Sort.\
 Search Algorithms: Covers algorithms such as Linear Search, Binary Search, and more advanced techniques.\
-Graph Algorithms: Includes algorithms like Dijkstra's, A*, Bellman-Ford, and Floyd-Warshall.\
+Graph Algorithms: Includes algorithms like Dijkstra's, A\*, Bellman-Ford, and Floyd-Warshall.\
 Dynamic Programming: Contains examples of dynamic programming approaches for solving complex problems.\
 Miscellaneous: Other important algorithms and data structures topics.\
 Each section includes source code, a README file explaining the concept, and examples to help understand how to implement and use the data structures and algorithms.
@@ -40,9 +40,9 @@ Feedback and contributions are highly appreciated.
 
 ## Contact
 
-Michael Luca 
-[GitHub](https://github.com/michaelgluca) - 
-[LinkedIn](https://www.linkedin.com/in/michael-g-luca-780801105/) - 
+Michael Luca
+[GitHub](https://github.com/michaelgluca) -
+[LinkedIn](https://www.linkedin.com/in/michael-g-luca-780801105/) -
 [𝕏](https://twitter.com/M_GLuca)\
 Project Link: `https://github.com/michaelgluca/dsa-python`\
 Thank you for visiting the dsa-python repository!

@@ -1,23 +1,23 @@
 class HashTable:
-    def __init__(self, size = 7):
+    def __init__(self, size=7):
         self.data_map = [None] * size
-        
+
     def __hash(self, key):
         my_hash = 0
         for letter in key:
             my_hash = (my_hash + ord(letter) * 23) % len(self.data_map)
         return my_hash
-    
+
     def print_table(self):
         for i, val in enumerate(self.data_map):
             print(i, ": ", val)
-            
+
     def set_item(self, key, value):
         index = self.__hash(key)
         if self.data_map[index] == None:
             self.data_map[index] = []
         self.data_map[index].append([key, value])
-        
+
     def get_item(self, key):
         index = self.__hash(key)
         if self.data_map[index] is not None:
@@ -25,7 +25,7 @@ class HashTable:
                 if self.data_map[index][i][0] == key:
                     return self.data_map[index][i][1]
         return None
-    
+
     def keys(self):
         all_keys = []
         for i in range(len(self.data_map)):
@@ -33,6 +33,7 @@ class HashTable:
                 for j in range(len(self.data_map[i])):
                     all_keys.append(self.data_map[i][j][0])
         return all_keys
+
 
 def item_in_common(list1, list2):
     my_dictionary = {}
@@ -42,6 +43,7 @@ def item_in_common(list1, list2):
         if j in list1:
             return True
     return False
+
 
 def find_duplicates(nums):
     nums_counts = {}
@@ -53,24 +55,27 @@ def find_duplicates(nums):
             duplicates.append(num)
     return duplicates
 
+
 def first_non_repeating_char(string):
     char_counts = {}
     for char in string:
         char_counts[char] = char_counts.get(char, 0) + 1
     for char in string:
-        if char_counts[char] == 1 :
+        if char_counts[char] == 1:
             return char
     return None
+
 
 def group_anagrams(strings):
     anagrams_groups = {}
     for string in strings:
-        canonical = ''.join(sorted(string))
+        canonical = "".join(sorted(string))
         if canonical in anagrams_groups:
             anagrams_groups[canonical].append(string)
         else:
             anagrams_groups[canonical] = [string]
     return list(anagrams_groups.values())
+
 
 def two_sum(nums, target):
     num_map = {}
@@ -81,8 +86,9 @@ def two_sum(nums, target):
         num_map[num] = i
     return []
 
+
 def subarray_sum(nums, target):
-    sum_index = {0:-1}
+    sum_index = {0: -1}
     current_sum = 0
     for i, num in enumerate(nums):
         current_sum += num

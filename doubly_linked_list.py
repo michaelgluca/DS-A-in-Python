@@ -74,7 +74,7 @@ class DoublyLinkedList:
         if index < 0 or index >= self.length:
             return None
         temp = self.head
-        if index > self.length/2:
+        if index > self.length / 2:
             for _ in range(index):
                 temp = temp.next
         else:
@@ -121,19 +121,19 @@ class DoublyLinkedList:
         temp.prev = None
         self.length -= 1
         return temp
-    
+
     def swap_first_last(self):
         if self.head is None or self.head == self.tail:
             return
         self.head.value, self.tail.value = self.tail.value, self.head.value
-        
+
     def reverse(self):
         temp = self.head
         while temp is not None:
             temp.prev, temp.next = temp.next, temp.prev
             temp = temp.prev
         self.head, self.tail = self.tail, self.head
-        
+
     def is_palindrome(self):
         if self.length <= 1:
             return True
