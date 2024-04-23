@@ -33,7 +33,7 @@ class LinkedList:
             return None
         temp = self.head
         pre = self.head
-        while (temp.next):
+        while temp.next:
             pre = temp
             temp = temp.next
         self.tail = pre
@@ -180,4 +180,3 @@ def find_kth_from_end(ll, k):
         fast = fast.next
         slow = slow.next
     return slow
-
