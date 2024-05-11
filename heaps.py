@@ -51,3 +51,25 @@ class MaxHeap:
         self._sink_down(0)
 
         return max_value
+
+
+def find_kth_smallest(nums, k):
+    max_heap = MaxHeap()
+
+    for num in nums:
+        max_heap.insert(num)
+        if len(max_heap.heap) > k:
+            max_heap.remove()
+
+    return max_heap.remove()
+
+
+def stream_max(nums):
+    max_heap = MaxHeap()
+    max_stream = []
+
+    for num in nums:
+        max_heap.insert(num)
+        max_stream.append(max_heap.heap[0])
+
+    return max_stream
