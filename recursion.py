@@ -78,3 +78,37 @@ def __invert_tree(self, node):
     node.right = self.__invert_tree(temp)
 
     return node
+
+
+def kth_smallest(self, k):
+    # initialize the number of nodes visited to 0
+    self.kth_smallest_count = 0
+    # call the helper function with the root node and k
+    return self.kth_smallest_helper(self.root, k)
+
+
+def kth_smallest_helper(self, node, k):
+    if node is None:
+        # if the current node is None, return None
+        return None
+
+    # recursively call the helper function on the left child of the node and store the result in left_result
+    left_result = self.kth_smallest_helper(node.left, k)
+    if left_result is not None:
+        # if left_result is not None, return it
+        return left_result
+
+    # increment the number of nodes visited by 1
+    self.kth_smallest_count += 1
+    if self.kth_smallest_count == k:
+        # if the kth smallest element is found, return the value of the current node
+        return node.value
+
+    # recursively call the helper function on the right child of the node and store the result in right_result
+    right_result = self.kth_smallest_helper(node.right, k)
+    if right_result is not None:
+        # if right_result is not None, return it
+        return right_result
+
+    # if the kth smallest element is not found, return None
+    return None
